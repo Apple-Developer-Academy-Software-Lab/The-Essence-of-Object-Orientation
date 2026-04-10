@@ -10,17 +10,19 @@
 .
 ├── Chapter-01/
 │   ├── MemberA/
-│   │   ├── 01_cooperation.swift     # 구현 파일 (번호_주제)
-│   │   ├── 02_responsibility.swift
+│   │   ├── Alice.swift
+│   │   ├── PlayingCard.swift
 │   │   └── README.md                # 개념 정리 및 코드 설명
 │   └── MemberB/
-│       ├── 01_cooperation.java
+│       ├── Alice.java
 │       └── README.md
 ├── Chapter-02/
 └── README.md
 ```
 
-> 한 챕터에서 구현이 여러 개라면 번호 prefix를 올려가며 파일을 추가하세요. (`01_`, `02_`, ...)
+> 파일명은 구현하는 **객체 이름**을 사용합니다. **PascalCase**를 따릅니다. (e.g. `Alice`, `PlayingCard`)  
+> 한 챕터에서 구현이 여러 개라면 각각의 객체 이름으로 파일을 추가하세요.  
+> 구현한 개념 설명은 파일명이 아닌 **README.md**에 작성하세요.
 
 ---
 
