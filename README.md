@@ -100,9 +100,3 @@ Xcode가 설치되어 있다면 Swift는 이미 사용 가능합니다.
 ```bash
 swift Alice.swift
 ```
-
-**Windows**: VSCode에서 Swift 실행 환경 구성이 복잡하므로 온라인 실행기를 사용하세요.  
-👉 [SwiftFiddle](https://swiftfiddle.com)
-
-> 각 멤버 폴더의 `README.md`에 코드 실행 방법과 개념 요약을 간단히 적어두세요.  
-> 다른 팀원이 바로 실행하고 이해할 수 있어야 합니다.
