@@ -1,0 +1,42 @@
+name: "❓ 질문 및 자유 토론"
+description: "학습 내용 중 궁금한 점이나 함께 논의하고 싶은 주제를 올립니다."
+title: "[질문/토론]: "
+labels: ["question", "help wanted"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 💡 객체지향의 바다에 오신 것을 환영합니다!
+        궁금한 점은 언제든 환영입니다. 사소한 질문이라도 괜찮으니 자유롭게 남겨주세요.
+  
+  - type: input
+    id: scope
+    attributes:
+      label: "🔖 관련 범위"
+      description: "어느 장, 어느 절인지 적어주세요."
+      placeholder: "예: 2장 1절 - 객체와 메시지"
+    validations:
+      required: true
+
+  - type: textarea
+    id: content
+    attributes:
+      label: "💬 질문 또는 토론 내용"
+      description: "무엇이 궁금한지, 혹은 어떤 주제로 이야기를 나누고 싶은지 적어주세요."
+      placeholder: "궁금한 내용을 상세히 적어주시면 답변에 큰 도움이 됩니다."
+    validations:
+      required: true
+
+  - type: textarea
+    id: thoughts
+    attributes:
+      label: "💡 본인의 생각"
+      description: "해당 문제에 대해 본인은 현재 어떻게 생각하고 있나요? (선택 사항)"
+      placeholder: "작성해주시면 더 깊이 있는 토론이 가능합니다."
+
+  - type: input
+    id: links
+    attributes:
+      label: "🔗 참고 링크"
+      description: "관련된 포스팅이나 공식 문서 등이 있다면 공유해주세요."
+      placeholder: "https://..."
