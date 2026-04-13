@@ -1,20 +1,20 @@
-name: "❓ 질문 및 자유 토론"
-description: "학습 내용 중 궁금한 점이나 함께 논의하고 싶은 주제를 올립니다."
-title: "[질문/토론]: "
-labels: ["question", "help wanted"]
+name: "❓ 질문 / 자유 토론"
+description: "책을 읽다 생긴 궁금증이나, 함께 이야기 나누고 싶은 주제를 올립니다."
+title: "[질문/토론] "
+labels: ["question", "discussion"]
 body:
   - type: markdown
     attributes:
       value: |
-        ### 💡 객체지향의 바다에 오신 것을 환영합니다!
-        궁금한 점은 언제든 환영입니다. 사소한 질문이라도 괜찮으니 자유롭게 남겨주세요.
-  
+        사소한 질문도 좋고, 정답이 없는 토론 주제도 환영합니다.
+        길게 쓰지 않아도 됩니다. 책의 어느 부분 얘기인지만 분명히 적어주세요.
+
   - type: input
     id: scope
     attributes:
       label: "🔖 관련 범위"
-      description: "어느 장, 어느 절인지 적어주세요."
-      placeholder: "예: 2장 1절 - 객체와 메시지"
+      description: "어느 챕터, 어느 절(또는 페이지)인지 적어주세요."
+      placeholder: "예: 2장 이상한 나라의 객체 - 객체, 그리고 이상한 나라"
     validations:
       required: true
 
@@ -22,21 +22,12 @@ body:
     id: content
     attributes:
       label: "💬 질문 또는 토론 내용"
-      description: "무엇이 궁금한지, 혹은 어떤 주제로 이야기를 나누고 싶은지 적어주세요."
-      placeholder: "궁금한 내용을 상세히 적어주시면 답변에 큰 도움이 됩니다."
+      placeholder: "무엇이 궁금한지, 어떤 주제로 이야기 나누고 싶은지 적어주세요."
     validations:
       required: true
 
   - type: textarea
     id: thoughts
     attributes:
-      label: "💡 본인의 생각"
-      description: "해당 문제에 대해 본인은 현재 어떻게 생각하고 있나요? (선택 사항)"
-      placeholder: "작성해주시면 더 깊이 있는 토론이 가능합니다."
-
-  - type: input
-    id: links
-    attributes:
-      label: "🔗 참고 링크"
-      description: "관련된 포스팅이나 공식 문서 등이 있다면 공유해주세요."
-      placeholder: "https://..."
+      label: "💡 지금 내가 이해한 바 / 내 생각 (선택)"
+      description: "현재 본인의 생각을 짧게라도 적어두면 토론이 훨씬 깊어집니다."

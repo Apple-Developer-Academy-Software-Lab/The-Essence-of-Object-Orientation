@@ -1,23 +1,56 @@
-name: "📅 주차별 학습 가이드"
-description: "매주 공부할 분량과 과제를 공지합니다."
-title: "[n주차] 학습 주제: "
+name: "📅 주차별 학습 공지"
+description: "이번 주에 읽을 분량과 해와야 할 과제를 공지합니다."
+title: "[Chapter-0n] 챕터명 / n주차"
 labels: ["announcement"]
 body:
   - type: markdown
     attributes:
-      value: "이번 주 스터디 내용을 아래 양식에 맞춰 작성해주세요."
+      value: |
+        스터디원이 이 이슈 하나만 보면 *이번 주에 뭘 읽고, 뭘 해오면 되는지* 알 수 있도록 작성해주세요.
+        길게 쓸 필요 없습니다. 빈칸만 채워도 충분합니다.
+
   - type: input
     id: range
     attributes:
       label: "📖 학습 범위"
-      placeholder: "예: p.100 ~ p.150"
+      description: "읽어올 챕터와 페이지 범위입니다."
+      placeholder: "예: Chapter-02 이상한 나라의 객체 (p.41 ~ p.74)"
     validations:
       required: true
-  - type: checkboxes
-    id: keywords
+
+  - type: textarea
+    id: homework
     attributes:
-      label: "🔑 핵심 키워드"
-      options:
-        - label: "캡슐화"
-        - label: "다형성"
-        - label: "상속 vs 합성"
+      label: "✏️ 이번 주 과제"
+      description: |
+        구현해올 객체, 정리해올 README, 그 외 해와야 할 일을 적어주세요.
+        브랜치/커밋 컨벤션은 README를 따릅니다.
+      value: |
+        - [ ] 구현: (예) `Alice` 객체 — 상태와 행동
+        - [ ] README 작성: 핵심 개념 정리
+        - [ ] PR 올리기: `[Chapter-0n] 챕터명 - 이름`
+    validations:
+      required: true
+
+  - type: input
+    id: deadline
+    attributes:
+      label: "⏰ 모임 / 마감일"
+      placeholder: "예: 2026-04-20 (월) 20:00"
+    validations:
+      required: true
+
+  - type: input
+    id: host
+    attributes:
+      label: "🎙️ 이번 주 진행/발표자"
+      placeholder: "예: Max"
+
+  - type: textarea
+    id: discussion
+    attributes:
+      label: "💬 함께 생각해볼 질문"
+      description: "모임 때 같이 이야기 나눠보면 좋을 질문 1~2개. (선택)"
+      placeholder: |
+        - 1장에서 말하는 '협력'은 우리가 평소 쓰던 '메서드 호출'과 어떻게 다른가?
+        - 객체의 자율성을 해치는 설계는 어떤 모습일까?
